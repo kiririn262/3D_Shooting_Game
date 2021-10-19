@@ -36,11 +36,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\CommandManager.cs" />
      <Compile Include="Assets\hpController.cs" />
+     <Compile Include="Assets\cheet.cs" />
      <Compile Include="Assets\Code.cs" />
      <Compile Include="Assets\UIController.cs" />
-     <Compile Include="Assets\cheet.cs" />
-     <Compile Include="Assets\CommandManager.cs" />
+     <Compile Include="Assets\Player.cs" />
+     <Compile Include="Assets\EnemyComponent.cs" />
+     <Compile Include="Assets\EnemyArea.cs" />
+     <Compile Include="Assets\Enemy.cs" />
      <None Include="Assets\flog\Materials\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
      <None Include="Assets\flog\Materials\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
      <None Include="Assets\flog\Materials\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
@@ -639,6 +643,9 @@
     <Reference Include="Unity.TextMeshPro">
         <HintPath>D:/Unity project/3D_Shooting_Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+        <HintPath>D:/Unity project/3D_Shooting_Game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>D:/Unity project/3D_Shooting_Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -650,9 +657,6 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>D:/Unity project/3D_Shooting_Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-        <HintPath>D:/Unity project/3D_Shooting_Game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

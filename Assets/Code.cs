@@ -27,4 +27,18 @@ public static class Code
     {
         Debug.Log(text.text);
     }
+
+    public static float Col_Sin(float radius, float speed)
+    {
+        float num;
+        num = radius * Mathf.Sin(Time.time * speed);
+        return num;
+    }
+
+    public static float Col_Cos(float radius, float speed)
+    {
+        float num;
+        num = radius * Mathf.Cos(Time.time * speed);
+        return num;
+    }
 }
