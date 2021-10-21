@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyComponent : MonoBehaviour
+public class EnemyComponent : Enemy_Base
 {
     [SerializeField]
     private GameObject Base;
@@ -18,12 +18,14 @@ public class EnemyComponent : MonoBehaviour
 
     void Update()
     {
-        ComponentMove(Base);
+        if(!(Component.gameObject == null)) ComponentMove(Base);
+        else Destroy(this.gameObject);
     }
 
     private void ComponentMove(GameObject obj)
     {
         x = Code.Col_Sin(radius, speed);
+        x = x + obj.transform.position.x;
         y = Code.Col_Cos(radius, speed);
         y = y + obj.transform.position.y;
         z = Code.Col_Cos(radius, speed * 3);

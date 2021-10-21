@@ -6,6 +6,14 @@ using UnityEngine.SceneManagement;
 
 public static class Code
 {
+    public static void LoadtoScene(int num)
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(num);
+    }
+    public static void LoadtoScene(string str)
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(str);
+    }
     public static void Active_ON(GameObject obj){
         obj.SetActive(true);
     }
@@ -40,5 +48,14 @@ public static class Code
         float num;
         num = radius * Mathf.Cos(Time.time * speed);
         return num;
+    }
+    public static  Vector3 Random_Pos(float min, float max)
+    {
+        float x = Random.Range(min, max);
+        float y = Random.Range(min, max);
+        float z = Random.Range(min, max);
+
+        Vector3 Pos = new Vector3(x,y,z);
+        return Pos;
     }
 }

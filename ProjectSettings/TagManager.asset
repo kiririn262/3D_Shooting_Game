@@ -6,6 +6,9 @@ TagManager:
   tags:
   - RoutePoint
   - Enemies
+  - Bullet
+  - ClearRoutePoint
+  - Background
   layers:
   - Default
   - TransparentFX

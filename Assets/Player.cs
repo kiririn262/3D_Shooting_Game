@@ -8,17 +8,23 @@ public class Player : MonoBehaviour
     public Transform[] RoutePoints;
 
     [Range(0, 200)]
+    [Header("プレイヤーのポイント間移動スピード")]
     public float Speed = 10f;
+
+    [Range(0, 50)]
+    [Header("キー入力による移動スピード(加速)")]
+    public float MoveSpeed = 10f;
+    [Header("キー入力による移動スピード(MAX値)")]
+    public float MoveRange = 40f;
+
+    [Header("HPの最大値")]
+    public float _initialLife = 100;
+    //public float Life = 100;
+    private float Life;
+    public Image LifeGage;
 
     bool _isHitRoutePoint;
 
-    [Range(0, 50)]
-    public float MoveSpeed = 10f;
-    public float MoveRange = 40f;
-
-    public float _initialLife = 100;
-    public float Life = 100;
-    public Image LifeGage;
     IEnumerator Move()
     {
         var prevPointPos = transform.position;
@@ -72,10 +78,43 @@ public class Player : MonoBehaviour
             other.gameObject.SetActive(false);
             Object.Destroy(other.gameObject); //当たった敵は削除する
         }
+        if(Life <= 0)
+        {
+            Camera.main.transform.SetParent(null);
+            gameObject.SetActive(false);
+            var sceneManager = Object.FindObjectOfType<SceneManager>();
+            sceneManager.ShowGameOver();
+        }
+        else if(other.gameObject.tag == "ClearRoutePoint")
+        {
+            var sceneManager = Object.FindObjectOfType<SceneManager>();
+            sceneManager.ShowClear();
+            _isHitRoutePoint = true;
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Background")
+        {
+            Life = 0;
+            LifeGage.fillAmount = Life / _initialLife;
+
+            Camera.main.transform.SetParent(null);
+            gameObject.SetActive(false);
+            var sceneManager = Object.FindObjectOfType<SceneManager>();
+            sceneManager.ShowGameOver();
+        }
     }
 
     void Start()
     {
+        Life = _initialLife;
         StartCoroutine(Move());
+    }
+    public Bullet BulletPrefab;
+    public void ShotBullet(Vector3 targetPos)
+    {
+        var bullet = Object.Instantiate(BulletPrefab, transform.position, Quaternion.identity);
+        bullet.Init(transform.position, targetPos);
     }
 }

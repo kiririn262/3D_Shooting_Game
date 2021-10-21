@@ -19,14 +19,30 @@ public class CommandManager : MonoBehaviour
     //     Debug.Log("えんねいぶるです");}
     // }
 
+    private int num;
     public void GetText()
     {
-        switch (command.text)
+        string[] array = command.text.Split(' ');
+        // コマンド処理
+        switch (array[0])
         {
-            case "a" :
-                cheet.Broken();
+            case "fps" :
+                cheet.fps();
+                break;
+
+            case "tps" :
+                cheet.tps();
+                break;
+
+            case "broken" :
+                cheet.broken();
                 Debug.Log("OMG");
                 break;
+
+            case "boost" :
+                cheet.boost(float.Parse(array[1]));
+                break;
+
             default :
                 break;
         }
