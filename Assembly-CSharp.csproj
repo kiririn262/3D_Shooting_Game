@@ -36,20 +36,20 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\CommandManager.cs" />
-     <Compile Include="Assets\hpController.cs" />
-     <Compile Include="Assets\cheet.cs" />
-     <Compile Include="Assets\Code.cs" />
-     <Compile Include="Assets\EnemyComponent.cs" />
-     <Compile Include="Assets\Enemy.cs" />
-     <Compile Include="Assets\Player.cs" />
-     <Compile Include="Assets\UIController.cs" />
-     <Compile Include="Assets\EnemyArea.cs" />
-     <Compile Include="Assets\Bullet.cs" />
-     <Compile Include="Assets\Enemy_Body.cs" />
-     <Compile Include="Assets\Enemy_Base.cs" />
-     <Compile Include="Assets\SceneManager.cs" />
-     <Compile Include="Assets\BulletController.cs" />
+     <Compile Include="Assets\Script\Enemy\Enemy_Body.cs" />
+     <Compile Include="Assets\Script\CommandManager.cs" />
+     <Compile Include="Assets\Script\Bullet\Bullet.cs" />
+     <Compile Include="Assets\Script\hpController.cs" />
+     <Compile Include="Assets\Script\cheet.cs" />
+     <Compile Include="Assets\Script\Enemy\Enemy_Base.cs" />
+     <Compile Include="Assets\Script\Code.cs" />
+     <Compile Include="Assets\Script\Enemy\EnemyComponent.cs" />
+     <Compile Include="Assets\Script\Enemy\Enemy.cs" />
+     <Compile Include="Assets\Script\Player.cs" />
+     <Compile Include="Assets\Script\UIController.cs" />
+     <Compile Include="Assets\Script\Enemy\EnemyArea.cs" />
+     <Compile Include="Assets\Script\Bullet\BulletController.cs" />
+     <Compile Include="Assets\Script\SceneManager.cs" />
      <None Include="Assets\flog\Materials\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
      <None Include="Assets\flog\Materials\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
      <None Include="Assets\flog\Materials\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
