@@ -7,10 +7,13 @@ public static class cheet
     private static GameObject[] objs;
     public static bool _homing = false;
     public static bool _fullauto = false;
+    public static bool _frog = false;
 
-    public static void Max_HP()
+
+    public static void Frog(GameObject _Frog)
     {
-        //
+        _frog = !_frog;
+        _Frog.SetActive(_frog);
     }
     public static void FullAuto()
     {

@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class CommandManager : MonoBehaviour
 {
     private InputField command;
+    [SerializeField]
+    private GameObject _Frog;
 
     void Start()
     {
@@ -59,6 +61,13 @@ public class CommandManager : MonoBehaviour
                     Debug.Log("boost:"+ float.Parse(array[1]));
                 #endif
                 cheet.boost(float.Parse(array[1]));
+                break;
+
+            case "frog":
+                cheet.Frog(_Frog);
+                #if UNITY_EDITOR
+                    Debug.Log("frog:"+ cheet._frog);
+                #endif
                 break;
 
             default :
