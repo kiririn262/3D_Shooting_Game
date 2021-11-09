@@ -50,6 +50,7 @@
      <Compile Include="Assets\Script\Enemy\EnemyArea.cs" />
      <Compile Include="Assets\Script\Bullet\BulletController.cs" />
      <Compile Include="Assets\Script\SceneManager.cs" />
+     <Compile Include="Assets\Script\CameraController.cs" />
      <None Include="Assets\flog\Materials\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
      <None Include="Assets\flog\Materials\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
      <None Include="Assets\flog\Materials\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
