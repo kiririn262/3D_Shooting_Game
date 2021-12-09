@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
     float time;
+    [Tooltip("1秒間に打ち出せる弾の数")]
     public int Shoot_num;
     Player _player;
     void Start()
