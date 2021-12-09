@@ -21,7 +21,7 @@ public class CommandManager : MonoBehaviour
     //     Debug.Log("えんねいぶるです");}
     // }
 
-    private int num;
+    //private int num;
     public void GetText()
     {
         string[] array = command.text.Split(' ');
